@@ -1,0 +1,28 @@
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed':''">
+    <div class="logo-container">
+        <button mat-fab color="warn" class="logo" (click)="toggleCollapse()">
+            <mat-icon>whatshot</mat-icon>
+        </button>
+        @if(collapsed){
+        <div class="logo-text">
+            Wikinatural
+        </div>
+        <button class="btn-close" mat-mini-fab color="basic" (click)="closeSidenav()">
+            <mat-icon>close</mat-icon>
+        </button>
+        }
+    </div>
+    <ul class="sidenav-nav">
+        @for (data of navData; track $index) {
+        <li class="sidenav-nav-item">
+            <a class="sidenav-nav-link" mat-icon-button [routerLink]="[data.routeLink]">
+                <mat-icon class="sidenav-link-icon">{{data.icon}}</mat-icon>
+                @if (collapsed)
+                {
+                <span class="sidenav-link-text">{{data.label}}</span>
+                }
+            </a>
+        </li>
+        }
+    </ul>
+</div>
