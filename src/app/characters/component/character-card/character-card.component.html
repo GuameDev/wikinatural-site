@@ -1,0 +1,17 @@
+<mat-card class="card">
+    <mat-card-header>
+        <mat-card-title-group>
+            <mat-card-title>{{character.name}}</mat-card-title>
+            <mat-card-subtitle>{{character.actor.join()}}</mat-card-subtitle>
+            <img class="card-img" mat-card-lg-image src={{character.img}} alt={{character.name}}>
+        </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+        <h2>Episodes</h2>
+        <ul>
+            @for (episode of character.episodes; track $index) {
+            <li>{{episode.title}}</li>
+            }
+        </ul>
+    </mat-card-content>
+</mat-card>

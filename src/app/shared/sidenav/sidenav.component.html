@@ -15,7 +15,9 @@
     <ul class="sidenav-nav">
         @for (data of navData; track $index) {
         <li class="sidenav-nav-item">
-            <a class="sidenav-nav-link" mat-icon-button [routerLink]="[data.routeLink]">
+            <a class="sidenav-nav-link" mat-icon-button [routerLink]="[data.routeLink]"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact:true}">
                 <mat-icon class="sidenav-link-icon">{{data.icon}}</mat-icon>
                 @if (collapsed)
                 {

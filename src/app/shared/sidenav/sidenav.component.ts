@@ -31,6 +31,11 @@ export class SidenavComponent {
       icon: 'home',
       label: 'Dashboard',
     },
+    {
+      routeLink: 'characters',
+      icon: 'wc',
+      label: 'Characters',
+    },
   ];
 
   constructor() {}

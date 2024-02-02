@@ -57,6 +57,8 @@
     text-decoration: none;
     border-radius: 0.625rem;
     transition: all 0.3s ease;
+
+    
     .sidenav-nav-link {
       display: flex;
       align-items: center;
@@ -70,7 +72,6 @@
 
       .sidenav-link-text {
         margin-left: 1.5rem;
-       
       }
     }
   }
@@ -80,3 +81,11 @@
   }
 }
 
+.active {
+  .sidenav-link-icon,
+  .sidenav-link-text {
+    color: #f55246;
+
+  }
+  
+}
